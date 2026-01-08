@@ -4,6 +4,11 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addCollection("navPages", collection =>
+    collection.getFilteredByGlob("src/pages/*.md")
+      .filter(p => p.data.nav)
+      .sort((a, b) => a.data.navOrder - b.data.navOrder)
+  );
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
 
