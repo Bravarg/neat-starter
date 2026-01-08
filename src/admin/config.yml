@@ -12,6 +12,19 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
+  - name: "home"
+    label: "Home Page"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "content/pages/home.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Show in Navigation", name: "nav", widget: "hidden", default: true }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "pages"
     label: "Pages"
     folder: "src/pages"
@@ -31,15 +44,8 @@ collections:
       - { label: "Show in Navigation", name: "nav", widget: "boolean", default: true }
       - { label: "Nav Order", name: "navOrder", widget: "number", default: 1 }
       - { label: "Language", name: "language", widget: "hidden", default: "en" }
-  - name: "home"
-    label: "Home Page"
-    file: "src/pages/home.md"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
-      - { label: "Permalink", name: "permalink", widget: "hidden", default: "/" }
-      - { label: "Body", name: "body", widget: "markdown" }
-    name: "news"
+  - name: "news"
+    label: "News"
     folder: "src/news"
     create: true
     editor:
@@ -55,8 +61,8 @@ collections:
         multiple: true
         create: true
         options: ["News", "created", "from", "config.yml"]
-  - label: "Settings"
-    name: "settings"
+  - name: "settings"
+    label: "Settings"
     editor:
       preview: false
     files:
