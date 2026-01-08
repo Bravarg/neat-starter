@@ -1,4 +1,15 @@
 ---
 title: Home page
+layout: layouts/page.njk
+navOrder: -1
+nav: true
+permalink: /
 ---
-Home page
+<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
+  <h1>
+    Welcome to
+    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+      {{title}}
+    </strong>
+  </h1>
+</div>

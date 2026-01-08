@@ -17,7 +17,7 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "content/pages/home.md"
+        file: "src/pages/home.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
@@ -40,10 +40,10 @@ collections:
         widget: "string"
         hint: "Example: /about/ or /services/"
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
-      - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Show in Navigation", name: "nav", widget: "boolean", default: true }
       - { label: "Nav Order", name: "navOrder", widget: "number", default: 1 }
       - { label: "Language", name: "language", widget: "hidden", default: "en" }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "news"
     label: "News"
     folder: "src/news"
