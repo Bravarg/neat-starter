@@ -12,9 +12,9 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Blog"
-    name: "blog"
-    folder: "src/posts"
+  - label: "Pages"
+    name: "pages"
+    folder: "src/pages"
     create: true
     editor:
       preview: false
@@ -59,10 +59,14 @@ collections:
               - { label: Title, name: title, widget: string }
               - { label: URL, name: url, widget: string }
               - { label: Description, name: desc, widget: string }
-      - label: "Meta Settings"
-        name: "settings"
-        file: "src/_data/settings.yaml"
+      - label: "Social Links"
+        name: "social"
+        file: "src/_data/social.yaml"
         fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Author, name: author, widget: string }
-          - { label: URL, name: url, widget: string }
+          - label: Social Items
+            name: social
+            widget: list
+            collapsed: false
+            fields:
+              - { label: Platform, name: platform, widget: string }
+              - { label: URL, name: url, widget: string }
