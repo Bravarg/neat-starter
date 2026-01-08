@@ -1,6 +1,6 @@
 ---
 title: Prices
-permalink: pricing
+permalink: /pricing/
 layout: layouts/page.njk
 nav: true
 navOrder: 2
