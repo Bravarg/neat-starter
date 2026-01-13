@@ -58,6 +58,9 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  // Add current year as global data
+  eleventyConfig.addGlobalData("currentYear", new Date().getFullYear());
+
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {
