@@ -1,7 +1,7 @@
 ---
 title: Prices
 permalink: /pricing/
-layout: layouts/page.njk
+layout: layouts/page.html
 nav: true
 navOrder: 2
 language: en

@@ -1,6 +1,6 @@
 ---
 title: Home page
-layout: layouts/page.njk
+layout: layouts/page.html
 navOrder: -1
 nav: true
 permalink: /
